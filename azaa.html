@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal dan Jawaban</title>
+    <link rel="stylesheet" href="azaa.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Soal Pilihan hati</h1>
+        <p id="question">apakah intannya sayang abngnya?</p>
+        
+        <div class="choices">
+            <label>
+                <input type="radio" name="answer" value="A"> A. gak
+            </label>
+            <label>
+                <input type="radio" name="answer" value="B"> B. hmmm
+            </label>
+            <label>
+                <input type="radio" name="answer" value="C"> C. iya..sayang banget sama abngnya
+            </label>
+            <label>
+                <input type="radio" name="answer" value="D"> D. masih dipikirin
+            </label>
+        </div>
+        
+        <button onclick="checkAnswer()">Submit Jawaban</button>
+        
+        <div id="result"></div>
+    </div>
+
+    <script src="azaa.js"></script>
+</body>
+</html>
