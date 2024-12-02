@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(3.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+.gift-box {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.lid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: rgb(241,45,45);
+    border-radius: 5px 5px 0 0;
+    transform-origin: top;
+    transition: transform 0.8s ease;
+    box-shadow: 0 5px 5px green;
+}
+
+.box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: rgb(242,114,114);
+    border-radius: 0 0 5px 5px;
+}
+
+.ribbon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 22px;
+    height: 150px;
+    background: yellow;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    box-shadow:  5px 0 5px green;
+}
+
+.message {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    height: 600px;
+    transform: translate(-50%, -50%);
+    color: rgb(113,7,7);
+    background: pink;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 5px rgb(251,109,166);
+    font-family: Monospace;
+}
+
+.message h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.message p {
+    margin: 40px 0 0;
+    font-size: 1.2rem;
+}
+
+.link {
+  color: green;
+  display: fley;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: Monospace;
+  font-weight: bold;
+  text-shadow: 0 2px 5px yellow;
+}
+li {
+margin-top: 700px;
+margin-left: -150px;
+list-style: none;
+}
