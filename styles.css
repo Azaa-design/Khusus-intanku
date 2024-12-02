@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('2.jpg');
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.flower {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transform: rotate(10deg);
+    animation: flowerBloom 50s ease-out forwards;
+}
+
+.petal {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #ff4081;
+    border-radius: 50px;
+    opacity: 0;
+    transform: scale(0);
+    box-shadow: yellow 0px 0px 0.30em, red 0px 0.25em 1em;
+}
+
+.petal1 {
+    top: 0;
+    left: 50%;
+    transform-origin: bottom center;
+}
+
+.petal2 {
+    top: 50%;
+    left: 0;
+    transform-origin: center right;
+}
+
+.petal3 {
+    top: 50%;
+    right: 0;
+    transform-origin: center left;
+}
+
+.petal4 {
+    bottom: 0;
+    top: 50%;
+    right: 0;
+    transform-origin: center right;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    box-shadow: green 0px 0px 0.30em, cyan 0px 0.25em 1em;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: centerPulse 3s ease-out forwards;
+}
+
+@keyframes flowerBloom {
+    0% {
+        transform: rotate(450deg);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(-500deg);
+        opacity: 1;
+    }
+}
+
+@keyframes petalExpand {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes centerPulse {
+    0% {
+        transform: translate(-50%, -50%) scale(5);
+    }
+    50% {
+        transform: translate(-400%, -400%) scale(3);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+}
+
+.petal1 {
+    animation: petalExpand 1s 0.5s forwards;
+}
+
+.petal2 {
+    animation: petalExpand 1s 1s forwards;
+}
+
+.petal3 {
+    animation: petalExpand 1s 1.5s forwards;
+}
+
+.petal4 {
+    animation: petalExpand 1s 2s forwards;
+}
+.petal5 {
+    animation: petalExpand 1s 2s forwards;
+}
+
+.container-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  color: red;
+  margin-top: 185px;
+  position: absolute;
+  font-family: Monospace;
+  font-size: 25px;
+  margin-left: -420px;
+  position: absolute;
+  text-shadow: 2px 2px 5px blue;
+}
+
+.atas {
+  display: flex;
+  color: #cf3d0e;
+  text-decoration: none;
+  margin-top: 170px;
+  font-size: 25px;
+  font-family: Times New Roman;
+  margin-left: -295px;
+  position: absolute;
+  text-shadow: 2px 2px 6px blue;
+}
+
+li {
+  list-style: none;
+}
+
+.bawah {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  margin-top: 200px;
+  color: #cf3d0e;
+  text-decoration: none;
+  font-family: Times New Roman;
+  margin-left: -325px;
+  position: absolute;
+  text-shadow: 2px 2px 5px blue;
+}
+
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -550px;
+  margin-left: -1px;
+}
+
+.balloon {
+  width: 120px;
+  height: 150px;
+  background: radial-gradient(circle, #FF6F61, #FF3B3B);
+  border-radius: 50%;
+  position: relative;
+  animation: float 3s infinite ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 5px 5px black;
+}
+
+.balloon:before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 20px;
+  background: #FF3B3B;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+.pop-animation {
+  animation: pop 0.3s forwards;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
