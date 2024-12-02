@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('1.jpg');
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  text-align: center;
+  color: #ad2d2dff;
+  font-family: Times New Roman;
+}
+
+#main-text {
+  font-size: 1rem;
+  font-weight: bold;
+  animation: pulse 4s infinite;
+  font-size: 30px;
+}
+
+#sub-text {
+  font-size: 1.5rem ;
+  margin-top: 20px;
+  margin-left: 20px;
+  animation: fadeIn 3s ease-in-out infinite;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1.1);
+    color: #f72cbb;
+  }
+  50% {
+    transform: scale(1);
+    color: tomato;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
